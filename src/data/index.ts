@@ -292,8 +292,8 @@ export const allSocials: Record<'github' | 'linkedin' | 'email', ISocials> = {
 
 // Local avatar (prefer this over GitHub avatar). Place your image at `public/img/avatar.svg` or `public/img/avatar.png`.
 // Use uploaded custom avatar in public/img (falls back to GitHub avatar if absent)
-// Empty avatar by default for deployed site (prevents serving the uploaded image).
-export const avatar = ''
+// Local avatar path (place your image in `public/img/` with this filename)
+export const avatar = '/img/openart-60356aa07dd242a99c82091c2fe007d2_raw.jpg'
 
 
 
