@@ -3,10 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-vue-next'
 import AvatarFallback from '../ui/avatar/AvatarFallback.vue'
 import Button from '../ui/button/Button.vue'
 import Avatar from '../ui/avatar/Avatar.vue'
-import AvatarImage from '../ui/avatar/AvatarImage.vue'
-import { allSocials, introText, avatar } from '@/data'
-// prefer local avatar if provided, otherwise fall back to GitHub avatar.png
-const avatarSrc = avatar || (allSocials.github.link + '.png')
+import { allSocials, introText } from '@/data'
 const emit = defineEmits<{
   (e: 'scroll-to-section', sectionId: string): void
 }>()
@@ -23,7 +20,7 @@ const emit = defineEmits<{
         :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
       >
         <Avatar class="w-32 h-32 mx-auto mb-8 bg-primary/10 text-primary border border-primary/20">
-          <AvatarImage :src="avatarSrc" />
+          <!-- Avatar image hidden in production per request; show fallback initials only -->
           <AvatarFallback>AT</AvatarFallback>
         </Avatar>
 
