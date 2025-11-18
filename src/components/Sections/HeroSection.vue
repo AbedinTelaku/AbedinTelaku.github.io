@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { Github, Linkedin, Mail } from 'lucide-vue-next'
 import AvatarFallback from '../ui/avatar/AvatarFallback.vue'
-import AvatarImage from '../ui/avatar/AvatarImage.vue'
 import Button from '../ui/button/Button.vue'
 import Avatar from '../ui/avatar/Avatar.vue'
-import avatarImage from '../../assets/img/avatar.jpg'
-import { allSocials, introText } from '@/data'
+import AvatarImage from '../ui/avatar/AvatarImage.vue'
+import { allSocials, introText, avatar } from '@/data'
+// prefer local avatar if provided, otherwise fall back to GitHub avatar.png
+const avatarSrc = avatar || (allSocials.github.link + '.png')
 const emit = defineEmits<{
   (e: 'scroll-to-section', sectionId: string): void
 }>()
@@ -21,9 +22,9 @@ const emit = defineEmits<{
         :initial="{ opacity: 0, y: 30 }"
         :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
       >
-        <Avatar class="w-32 h-32 mx-auto mb-8">
-          <AvatarImage :src="avatarImage" class="object-cover" />
-          <AvatarFallback>AB</AvatarFallback>
+        <Avatar class="w-32 h-32 mx-auto mb-8 bg-primary/10 text-primary border border-primary/20">
+          <AvatarImage :src="avatarSrc" />
+          <AvatarFallback>AT</AvatarFallback>
         </Avatar>
 
         <h1
@@ -32,7 +33,7 @@ const emit = defineEmits<{
           :initial="{ opacity: 0, y: 20 }"
           :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
         >
-          Full Stack Developer
+          Software Developer
         </h1>
 
         <p

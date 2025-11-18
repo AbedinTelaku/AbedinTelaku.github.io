@@ -27,7 +27,7 @@ const emit = defineEmits<{
           class="flex items-center space-x-2 transition-all duration-300 ease-in-out hover:scale-[105%]"
         >
           <Code2 class="h-8 w-8 text-primary" />
-          <span class="text-xl font-medium">Ali Barznji</span>
+          <span class="text-xl font-medium">Abedin Telaku</span>
         </div>
 
         <!-- Desktop Navigation -->

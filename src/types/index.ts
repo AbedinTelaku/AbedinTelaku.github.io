@@ -1,10 +1,16 @@
 import type { Component } from "vue"
 
+export interface IProjectRepo {
+  label: string
+  url: string
+}
+
 export interface IProject {
   title: string
   description: string
   technologies: string[]
   github?: string
+  repos?: IProjectRepo[]
   live?: string
   image?: string
 }

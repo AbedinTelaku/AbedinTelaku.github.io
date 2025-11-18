@@ -1,230 +1,131 @@
 import type { IAchievement, IExperience, IFunFact, INavLink, IProject, ISkill, ISocials, IStat } from "@/types";
-import portfolioImage from '../assets/img/projects/portfolio.png';
-import inzpiriImage from '../assets/img/projects/inzpiri.png';
-import wizrxImage from '../assets/img/projects/wizrx.png';
-import cdnCheckerImage from '../assets/img/projects/cdn-checker.png';
-import smartPricerImage from '../assets/img/projects/smart-pricer.png';
-import seeyouImage from '../assets/img/projects/seeyou.png';
-import envImage from '../assets/img/projects/env.png';
-import { BookOpen, Gamepad, Music, Plane, Crown, Users, Film, Shuffle, Code2, Briefcase, Award } from "lucide-vue-next";
+import { Award, BookOpen, Briefcase, Code2, Globe, Laptop, Users } from "lucide-vue-next";
 
 export const projects: IProject[] = [
   {
-    title: 'Portfolio Website',
-    description: 'My Personal Portfolio',
-    technologies: [
-      "Vuejs",
-      "Tailwindcss",
-      "Shadcn UI",
-      "Vite",
-      "Github",
-      "Git",
-      "Figma",
-      "Typescript",
-      "Vercel",
-    ],
-    github: 'https://github.com/Ali559/portfolio',
-    live: 'https://alibarznji.dev',
-    image: portfolioImage
-  },
-  {
-    title: 'Inzpiri (In progress)',
-    description: 'Online Education Platform for Teachers and Students.',
-    technologies: [
-      "Vuejs",
-      "Tailwindcss",
-      "Vite",
-      "AWS",
-      "Github",
-      "Git",
-      "Figma",
-      "Go",
-      "MongoDB",
-      "Docker",
-      "Redis",
-      "Typescript",
-    ],
-    live: 'https://beta.inzpiri.com',
-    image: inzpiriImage
-  },
-  {
-    title: 'WiZRX',
-    description: 'collaboration tool designed to empower businesses by streamlining communication and strengthening internal connections.',
-    technologies: [
-      "Reactjs",
-      "PostCSS",
-      "Vite",
-      "AWS",
-      "Github",
-      "Git",
-      "Figma",
-      "Go",
-      "Nestjs",
-      "MongoDB",
-      "Socket.io",
-      "Typescript",
-    ],
-    live: 'https://masterwizr.com/wizr-x/',
-    image: wizrxImage
-  },
-  {
-    title: 'Smart Pricer',
-    description: 'Ticketing and Price Analytics as well as Dynamic Pricing based on Data Science for Ski Resorts, Sports, Cinema and Entertainment.',
-    technologies: [
-      "Nodejs",
-      "Express",
-      "Typescript",
-      "MongoDB",
-      "Proxy",
-      "JWT",
-      "Redis",
-      "Git",
-      "Github",
-      "Swagger",
-    ],
-    live: 'https://www.smart-pricer.com/',
-    image: smartPricerImage
-  },
-  {
-    title: 'SEEYOU',
-    description: 'A Modern All in one Communication Platform for Teams and Individuals.',
-    technologies: [
-      "Nodejs",
-      "Express",
-      "Typescript",
-      "MongoDB",
-      "Proxy",
-      "JWT",
-      "Redis",
-      "Git",
-      "Github",
-      "Swagger",
-    ],
-    live: 'https://seeyou.eu', // Backend service
-    image: seeyouImage
-  },
-  {
-    title: 'Strongly typed Env',
-    description: 'A powerful, type-safe environment configuration library for Node.js applications that automatically generates TypeScript types from your environment files.',
-    github: 'https://github.com/ali559/strongly-typed-env',
-    technologies: [
-      'Nodejs',
-      'CI/CD',
-      'Semver',
-      'Typescript',
-      'NPM',
-      'Git',
-      'Github',
-    ],
-    live: 'https://www.npmjs.com/package/strongly-typed-env',
-    image: envImage
-
-  },
-  {
-    title: 'CDN Checker',
-    description: 'A Visual Studio Code extension that helps you identify broken, redirecting, or oversized external links in your project files. Perfect for maintaining healthy CDN references, image links, video embeds, and other external resources.',
-    github: 'https://github.com/Ali559/cdn-checker',
-    technologies: [
-      'Nodejs',
-      'Typescript',
-      'VSCE',
-      'Git',
-      'Github',
-    ],
-    live: 'https://marketplace.visualstudio.com/items?itemName=AliBarznji.cdn-checker',
-    image: cdnCheckerImage
-  },
-  {
-    title: 'SEEYOU Chat',
-    description: 'An API based integration with Slack and Telegram for the SEEYOU platform',
+    title: 'Cars Marketplace (Vetura365)',
+    description: 'Full-stack marketplace for buying and selling cars with dealer subscriptions, secure auth, and responsive UI.',
     technologies: [
       'React',
-      'Nodejs',
-      'Typescript',
-      'Git',
-      'Github',
-      'Swagger',
-      'Nestjs',
-      'Websocket',
-      'Redis',
-      'Slac API',
-      'Telegram API',
-    ],
-  },
-  {
-    title: 'Wizr Chat',
-    description: 'A Chat System for the WiZRX platform',
-    technologies: [
-      'React',
-      'Nodejs',
-      'Typescript',
-      'Zustand',
-      'Git',
-      'Github',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Node.js',
       'Express',
-      'Websocket',
-      'Socket.io',
-      'MongoDB',
+      'Stripe',
+      'Docker',
+      'Google Cloud Build',
+    ],
+    live: 'https://vetura365.com'
+  },
+  {
+    title: 'EDMA GmbH',
+    description: 'Responsive React experience for a Swiss client with performance optimisations and modular UI kit.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Lazy Loading',
+      'Reusable Components',
+    ],
+    live: 'https://a-telaku.netlify.app/'
+  },
+  {
+    title: 'Movie TV Tracker',
+    description: 'Streaming companion app that delivers dubbed Albanian content with secure auth and fast APIs.',
+    technologies: [
+      'React',
+      'Node.js',
+      'Express',
+      'Responsive Design',
+      'JWT Auth',
+    ],
+    repos: [
+      { label: 'Frontend', url: 'https://github.com/AbedinTelaku/movie-tv-tracker' },
+      { label: 'Backend', url: 'https://github.com/AbedinTelaku/movie-tv-tracker-backend' },
     ],
   },
   {
-    title: 'Gym Management System',
-    description: 'A Modern Gym Management System',
+    title: 'Resume AI',
+    description: 'AI-powered resume analysis platform with NLP insights, cloud-scale processing, and instant feedback.',
     technologies: [
-      '.NET',
-      'C#',
-      'SQL Server',
-      'SQL',
-      'OOP'
+      'Node.js',
+      'Express',
+      'NLP',
+      'Cloud AI Services',
+      'React',
+    ],
+    repos: [
+      { label: 'Code', url: 'https://github.com/AbedinTelaku/ResumeAnalyzer' }
     ],
   },
   {
-    title: 'Grades App',
-    description: 'A Grades platform for highschool graduates to easily pick the best university for them based on their grades and preferences',
+    title: 'DevLobby',
+    description: 'Interactive puzzle hub with leaderboards that keeps developers engaged through gamified learning.',
     technologies: [
-      '.NET',
-      'C#',
-      'SQL Server',
-      'SQL',
-      'OOP',
-      'SQLITE',
+      'React',
+      'Hooks',
+      'State Management',
+      'Responsive UI',
+    ],
+    // This repository is private — link added for reference
+    github: 'https://github.com/AbedinTelaku/DevLobby',
+  },
+  {
+    title: 'KS-PRESS',
+    description: 'News management platform with secure admin workflows, CRUD tooling, and performance-focused PHP backend.',
+    technologies: [
+      'HTML',
+      'CSS',
+      'PHP',
+      'MySQL',
+      'Responsive Design',
+    ],
+    repos: [
+      { label: 'Code', url: 'https://github.com/AbedinTelaku/ProjektiNeWeb' }
     ],
   }
 ];
 
 export const experience: IExperience[] = [
   {
-    title: 'Software Engineer',
-    company: 'Learnio AS',
-    period: 'March 2023 - Present',
-    description: 'Promoted to Team Lead within 8 months for exceptional technical and leadership skills. Lead cross-functional projects, ensuring timely, high-quality delivery. Oversee frontend and backend development, collaborating with designers, developers, and stakeholders. Build intuitive UIs using React.js, Vue.js, JavaScript, HTML, and CSS. Develop scalable systems with Node.js, Go, REST APIs, and microservices. Maintain code quality, Git versioning, and CI best practices.',
+    title: 'Full Stack Developer',
+    company: 'Xpertt Technologies',
+    period: 'January 2025 – Present',
+    description: 'Scale .NET + React/Angular platforms, optimize SQL databases, automate CI/CD with GitHub Actions/Azure DevOps, and integrate REST APIs plus third-party services while mentoring cross-functional teams.',
   },
   {
-    title: 'Software Engineer',
-    company: 'Dev Centre House',
-    period: 'June 2021 - March 2023',
-    description: 'Developed and maintained the backend of the SEEYOU chat platform using RabbitMQ, Redis, and scalable messaging architecture. Built Slack and Telegram integration demos for real-time messaging. Led backend proxy development for Smart Pricer, enhancing API performance. Recognized twice as Employee of the Month and selected for DCH’s elite "Navy SEAL" team for top-tier performance, innovation, and work ethic. Integrated real-time communication with Node.js and third-party APIs.',
+    title: 'Junior React Developer',
+    company: 'Kuma Digital',
+    period: 'April 2024 – December 2024',
+    description: 'Translated high-fidelity designs into pixel-perfect React + Tailwind UI, delivered responsive navigation and interactive modals, and collaborated remotely via Agile cadences, Zoom, and GitHub.',
+  },
+  {
+    title: 'React Developer (Internship)',
+    company: 'Starlabs',
+    period: 'January 2023 – March 2023',
+    description: 'Partnered with designers and backend engineers to ship reusable React components, coordinate via Slack/GitHub, and support code reviews for a production-ready UI system.',
   },
 ];
 
 export const achievements: IAchievement[] = [
   {
-    title: 'Critical Thinking and Creative Problem Solving',
-    issuer: 'Global Solutions',
-    year: '2019',
-    description: 'Recognized for exceptional critical thinking and creative problem-solving skills.'
+    title: 'CI/CD Automation Lead',
+    issuer: 'Xpertt Technologies',
+    year: '2025',
+    description: 'Implemented GitHub Actions/Azure DevOps pipelines that keep deployments fast, reliable, and observable.',
   },
   {
-    title: 'Adaptability',
-    issuer: 'Global Solutions',
-    year: '2019',
-    description: 'Recognized for exceptional adaptability and ability to learn quickly.'
+    title: 'Remote Delivery Champion',
+    issuer: 'Kuma Digital',
+    year: '2024',
+    description: 'Recognized for consistently meeting sprint goals while collaborating across Swiss and Kosovo time zones.',
   },
   {
-    title: 'Virtual Collaboration',
-    issuer: 'Global Solutions',
-    year: '2019',
-    description: 'Recognized for exceptional virtual collaboration skills.'
+    title: 'High-Impact Internship',
+    issuer: 'Starlabs',
+    year: '2023',
+    description: 'Delivered production-quality React components that sped up feature development by 20%.'
   },
 ];
 
@@ -254,14 +155,14 @@ export const navLinks: INavLink[] = [
 
 
 
-export const introText = `I craft beautiful, scalable web applications with modern technologies and best practices`;
+export const introText = `I'm Abedin Telaku, a Kosovo-based software developer building reliable products across React, .NET, and cloud-native stacks.`;
 
-export const aboutText = ` I'm a passionate full stack developer with over 5 years of experience building scalable
-          web applications. I love working with modern technologies and creating solutions that make
-          a real impact.`
+export const aboutText = `I hold a B.Sc. in Computer Science & Engineering from UBT and deliver end-to-end solutions
+          for European clients. My day-to-day includes architecting frontends in React or Angular,
+          shipping secure APIs with Node.js/.NET, and keeping deployments automated through modern DevOps tooling.`
 
 
-export const contactText = ` I'm always open to discussing new opportunities, interesting projects, or potential collaborations. Feel free to reach out if you have any questions or just want to say hello! `;
+export const contactText = `Let's connect if you need a hands-on engineer who can own the full stack—from product discovery to deployment—and collaborate seamlessly with distributed teams.`;
 
 
 
@@ -269,7 +170,6 @@ export const contactText = ` I'm always open to discussing new opportunities, in
 
 
 export const skills: ISkill[] = [
-  // Languages (Top 5)
   {
     name: 'TypeScript',
     level: 90,
@@ -281,99 +181,93 @@ export const skills: ISkill[] = [
     category: 'Languages'
   },
   {
-    name: 'Go',
-    level: 60,
-    category: 'Languages'
-  },
-  {
     name: 'C#',
-    level: 60,
+    level: 85,
     category: 'Languages'
   },
   {
-    name: 'Elixir',
-    level: 40,
+    name: 'Java',
+    level: 75,
     category: 'Languages'
   },
-
-  // Frameworks (Top 5)
+  {
+    name: 'Python',
+    level: 70,
+    category: 'Languages'
+  },
   {
     name: 'React',
-    level: 90,
+    level: 92,
     category: 'Frameworks'
   },
   {
     name: 'Vue',
-    level: 90,
+    level: 78,
     category: 'Frameworks'
   },
   {
-    name: 'Next',
+    name: 'Angular',
     level: 80,
     category: 'Frameworks'
   },
   {
-    name: 'Nestjs',
+    name: '.NET',
+    level: 85,
+    category: 'Frameworks'
+  },
+  {
+    name: 'Next.js',
+    level: 78,
+    category: 'Frameworks'
+  },
+  {
+    name: 'Git',
     level: 90,
-    category: 'Frameworks'
-  },
-  {
-    name: 'Express',
-    level: 95,
-    category: 'Frameworks'
-  },
-
-  // Tools (Top 5)
-  {
-    name: 'NPM',
-    level: 95,
     category: 'Tools'
   },
   {
-    name: 'VSCode',
-    level: 90,
+    name: 'Docker',
+    level: 85,
+    category: 'Tools'
+  },
+  {
+    name: 'Kubernetes',
+    level: 70,
+    category: 'Tools'
+  },
+  {
+    name: 'Figma',
+    level: 82,
     category: 'Tools'
   },
   {
     name: 'Postman',
-    level: 80,
+    level: 85,
     category: 'Tools'
   },
   {
-    name: 'Swagger',
-    level: 80,
-    category: 'Tools'
-  },
-  {
-    name: 'Git',
-    level: 70,
-    category: 'Tools'
-  },
-
-  // Databases (Top 5)
-  {
-    name: 'MongoDB',
-    level: 90,
-    category: 'Databases'
-  },
-  {
-    name: 'MySQL',
-    level: 90,
-    category: 'Databases'
-  },
-  {
-    name: 'Redis',
-    level: 80,
+    name: 'SQL Server',
+    level: 85,
     category: 'Databases'
   },
   {
     name: 'PostgreSQL',
-    level: 60,
+    level: 78,
     category: 'Databases'
   },
   {
-    name: 'RabbitMQ',
-    level: 60,
+    name: 'MongoDB',
+    level: 82,
+    category: 'Databases'
+  },
+  {
+    name: 'MySQL',
+    level: 80,
+    category: 'Databases'
+  },
+  {
+    name: 'Firebase',
+    level: 70,
     category: 'Databases'
   },
 ];
@@ -384,78 +278,56 @@ export const skills: ISkill[] = [
 export const allSocials: Record<'github' | 'linkedin' | 'email', ISocials> = {
   github: {
     name: "Github",
-    link: "github.com/ali559",
+    link: "https://github.com/AbedinTelaku",
   },
   linkedin: {
-
     name: "Linkedin",
-    link: "linkedin.com/in/ali-barznji-36b664325",
+    link: "https://www.linkedin.com/in/abedintelaku",
   },
   email: {
     name: "Email",
-    link: "biz@alibarznji.dev",
+    link: "abedintelaku1@gmail.com",
   },
-
 }
+
+// Local avatar (prefer this over GitHub avatar). Place your image at `public/img/avatar.svg` or `public/img/avatar.png`.
+// Use uploaded custom avatar in public/img (falls back to GitHub avatar if absent)
+export const avatar = '/img/openart-60356aa07dd242a99c82091c2fe007d2_raw.jpg'
 
 
 
 
 export const funFacts: IFunFact[] = [
   {
-    icon: Crown,
-    title: 'Early Leader',
-    description: 'Became a team leader at 22, guiding projects and people before most even finished grad school.',
-    color: 'from-yellow-500/20 to-amber-500/20'
-  },
-  {
-    icon: Music,
-    title: 'Classical Soul',
-    description: 'Deeply moved by classical music—especially Chopin’s nocturnes, which never fail to inspire focus and calm.',
-    color: 'from-purple-500/20 to-pink-500/20'
-  },
-  {
-    icon: Plane,
-    title: 'Frequent Explorer',
-    description: 'Travels at least once every year to experience new cultures, cuisines, and perspectives.',
-    color: 'from-blue-500/20 to-cyan-500/20'
+    icon: Globe,
+    title: 'Remote-First Mindset',
+    description: 'Thrives in remote Swiss/Kosovo collaborations, keeping communication crisp across time zones.',
+    color: 'from-sky-500/20 to-blue-500/20'
   },
   {
     icon: Users,
-    title: 'Global Circle',
-    description: 'Has friends scattered across many countries, making every trip feel like visiting family.',
-    color: 'from-green-500/20 to-emerald-500/20'
-  },
-  {
-    icon: Film,
-    title: 'Rare Moviegoer',
-    description: 'Has only been to the cinema once—a quirky fun fact that surprises most people.',
-    color: 'from-red-500/20 to-rose-500/20'
+    title: 'Collaborative Builder',
+    description: 'Loves pairing with designers, backend devs, and DevOps to ship polished features faster.',
+    color: 'from-emerald-500/20 to-teal-500/20'
   },
   {
     icon: BookOpen,
-    title: 'Literary Thinker',
-    description: 'Avid reader of philosophy and literature, with Dostoevsky being a constant source of reflection.',
-    color: 'from-indigo-500/20 to-blue-500/20'
+    title: 'Applied Researcher',
+    description: 'UBT thesis focuses on software engineering practices that improve product delivery.',
+    color: 'from-indigo-500/20 to-purple-500/20'
   },
   {
-    icon: Gamepad,
-    title: 'Story-Driven Gamer',
-    description: 'Prefers games with rich narratives that feel like interactive novels rather than just challenges.',
-    color: 'from-purple-500/20 to-violet-500/20'
-  },
-  {
-    icon: Shuffle,
-    title: 'Project Juggler',
-    description: 'Comfortably works across multiple projects without being tied to a single tech stack.',
-    color: 'from-teal-500/20 to-green-500/20'
+    icon: Laptop,
+    title: 'Mentor at Heart',
+    description: 'Enjoys helping interns adopt React best practices and write maintainable components.',
+    color: 'from-amber-500/20 to-orange-500/20'
   },
 ];
 
 
 export const stats: IStat[] = [
-  { number: '5+', label: 'Years Coding', icon: Code2 },
-  { number: '15+', label: 'Projects Built', icon: Briefcase },
-  { number: '4', label: 'Teams Led', icon: Users },
-  { number: '5–10', label: 'Honors Received', icon: Award },
+  { number: '3+', label: 'Years Building Products', icon: Code2 },
+  { number: '12+', label: 'End-to-end Projects', icon: Briefcase },
+  { number: '4', label: 'Remote Teams Supported', icon: Users },
+  { number: '2', label: 'Cloud Platforms Delivered', icon: Award },
 ];

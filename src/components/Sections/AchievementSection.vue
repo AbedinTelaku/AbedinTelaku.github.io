@@ -37,47 +37,69 @@ import Button from '../ui/button/Button.vue'
               hello!
             </p>
 
-            <div class="space-y-6">
-              <div
-                class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border transition-all hover:bg-accent hover:ml-5"
-              >
-                <div class="p-2 bg-primary/10 rounded-lg">
-                  <Mail class="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p class="font-medium">{{ allSocials.email.name }}</p>
-                  <p class="text-muted-foreground">{{ allSocials.email.link }}</p>
-                </div>
-              </div>
+              <div class="space-y-6">
+                <a
+                  :href="`mailto:${allSocials.email.link}`"
+                  class="block rounded-lg transition-all hover:ml-5"
+                  aria-label="Send email"
+                >
+                  <div
+                    class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border hover:bg-accent"
+                  >
+                    <div class="p-2 bg-primary/10 rounded-lg">
+                      <Mail class="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p class="font-medium">{{ allSocials.email.name }}</p>
+                      <p class="text-muted-foreground">{{ allSocials.email.link }}</p>
+                    </div>
+                  </div>
+                </a>
 
-              <div
-                class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border transition-all hover:bg-accent hover:ml-5"
-              >
-                <div class="p-2 bg-primary/10 rounded-lg">
-                  <Github class="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p class="font-medium">{{ allSocials.github.name }}</p>
-                  <p class="text-muted-foreground">{{ allSocials.github.link }}</p>
-                </div>
-              </div>
+                <a
+                  :href="allSocials.github.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block rounded-lg transition-all hover:ml-5"
+                  aria-label="Open GitHub profile"
+                >
+                  <div
+                    class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border hover:bg-accent"
+                  >
+                    <div class="p-2 bg-primary/10 rounded-lg">
+                      <Github class="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p class="font-medium">{{ allSocials.github.name }}</p>
+                      <p class="text-muted-foreground">{{ allSocials.github.link }}</p>
+                    </div>
+                  </div>
+                </a>
 
-              <div
-                class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border transition-all hover:bg-accent hover:ml-5"
-              >
-                <div class="p-2 bg-primary/10 rounded-lg">
-                  <Linkedin class="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p class="font-medium">{{ allSocials.linkedin.name }}</p>
-                  <p class="text-muted-foreground">{{ allSocials.linkedin.link }}</p>
-                </div>
+                <a
+                  :href="allSocials.linkedin.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block rounded-lg transition-all hover:ml-5"
+                  aria-label="Open LinkedIn profile"
+                >
+                  <div
+                    class="flex items-center space-x-4 p-4 rounded-lg bg-card border border-border hover:bg-accent"
+                  >
+                    <div class="p-2 bg-primary/10 rounded-lg">
+                      <Linkedin class="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p class="font-medium">{{ allSocials.linkedin.name }}</p>
+                      <p class="text-muted-foreground">{{ allSocials.linkedin.link }}</p>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </div>
 
             <div class="mt-8">
               <Button size="lg" class="w-full" asChild>
-                <a href="/resume.pdf" download>
+                <a href="/AbedinTelaku%20-%20Software%20Developer.pdf" download>
                   <Download class="h-5 w-5 mr-2" />
                   Download Resume
                 </a>

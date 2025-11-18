@@ -48,10 +48,24 @@ import Badge from '../ui/badge/Badge.vue'
               </div>
 
               <div
-                v-if="project.github || project.live"
-                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4"
+                v-if="project.repos?.length || project.github || project.live"
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 flex-wrap px-4"
               >
-                <Button v-if="project.github" size="sm" variant="secondary" asChild>
+                <template v-if="project.repos?.length">
+                  <Button
+                    v-for="repo in project.repos"
+                    :key="repo.url"
+                    size="sm"
+                    variant="secondary"
+                    asChild
+                  >
+                    <a :href="repo.url" target="_blank" rel="noopener noreferrer">
+                      <Github class="h-4 w-4 mr-2" />
+                      {{ repo.label }}
+                    </a>
+                  </Button>
+                </template>
+                <Button v-else-if="project.github" size="sm" variant="secondary" asChild>
                   <a :href="project.github" target="_blank" rel="noopener noreferrer">
                     <Github class="h-4 w-4 mr-2" />
                     Code
